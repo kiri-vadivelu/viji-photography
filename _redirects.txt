@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://vijiphotography.netlify.app/* https://vijiphotography.ca/:splat 301!

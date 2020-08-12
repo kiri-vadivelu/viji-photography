@@ -1,0 +1,533 @@
+/* Digital Designers 2.0 Framework via https://digitaldesigners.ca */
+/* Structure */
+@font-face {
+  font-family: "Reemkufi-Regular";
+  src: url("https://vijiphotography.ca/reemkufi-regular.ttf");
+}
+
+@font-face {
+  font-family: "Righteous-Regular";
+  src: url("https://vijiphotography.ca/righteous-regular.ttf");
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 62.5%/1.5 verdana;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --primary: gainsboro;
+    --secondary: gray;
+    --light: ivory;
+    --dark: black;
+    --theme: darkcyan;
+  }
+  
+/* Style */
+  html,
+  body {
+    background: var(--primary);
+    color: var(--dark);
+    overflow: auto;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  #wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+    
+  #main {
+    max-width: 1500px;
+    min-height: 100vh;
+    padding: 50px 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  header {
+    top: 0;
+    position: fixed;
+    border-bottom: solid 2px var(--light);
+  }
+
+  footer {
+    bottom: 0; 
+    border-top: solid 2px var(--light);
+  }
+  
+  header,
+  footer {
+    width: 100%;
+    opacity: 0.9;
+    color: var(--dark);
+    z-index: 1;
+    overflow: hidden;
+    background: var(--theme);
+    font-family: "righteous-regular";
+  }
+    
+/* Content */
+  h1,
+  h2,
+  h3 {
+    opacity: 0.7;
+    font-family: "righteous-regular";
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.7rem;
+    font-family: "reemkufi-regular";
+  }
+    
+  h1 {
+    padding: 1rem 0 0 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    padding: 0 0 1rem 0;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  
+  a {
+    opacity: .8;
+    color: var(--dark);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    opacity: 1.0;
+    border-bottom: solid 2px var(--primary);
+  }
+
+  .current {
+    color: var(--dark);
+  }
+  
+  li {
+    list-style: none;
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  article {
+    max-width: 1080px;
+  }
+
+  section {
+    width: 600px;
+  }
+
+  article,
+  section {
+    padding: 10px;
+  }
+  
+/* Navigation */  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #logo,
+  #menu {
+    text-transform: uppercase;
+  }
+  
+  #logo {
+    width: 10%;
+  }
+  
+  #logo a {
+    font-size: 1.7rem;
+    padding: 0 20px;
+  }
+  
+  #menu {
+    width: 90%;
+  }
+  
+  #menu ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #menu li {
+    padding: 10px;
+  }
+   
+/* Header & Footer */     
+  footer p {
+    text-align: left;
+    font-size: 1.5rem;
+    opacity: .8;
+    padding-left: 10px;
+  }
+
+/* CSS Carousel */
+.carousel,
+ul.slides {
+  margin: 0;
+  padding: 0;
+}
+ul.slides {
+  display: block;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  list-style: none;
+}
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+ul.slides input {
+  display: none; 
+}
+.slide-container { 
+  display: block; 
+}
+.slide-image {
+  display: block;
+  position: absolute;
+  padding: 70px 0;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+}   
+.slide-image img {
+  width: auto;
+  height: 100%;
+  border: 2px solid var(--theme);
+}
+.carousel-controls {
+  position: absolute;
+  top: 25%;
+  left: 0; 
+  right: 0;
+  z-index: 1;
+  font-size: 15rem;
+  line-height: 30rem;
+  color: var(--theme);
+}
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 250px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+.slide-image:hover + .carousel-controls label{
+  opacity: 0.5;
+}
+.carousel-controls label:hover {
+  opacity: 1;
+}
+.carousel-controls .prev-slide {
+  width: 15%;
+  text-align: left;
+  left: 0;
+}
+.carousel-controls .next-slide {
+  width: 15%;
+  text-align: right;
+  right: 0;
+}
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  z-index: 1;
+  text-align: center;
+}
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--theme);
+  opacity: 0.7;
+  margin: 5px;
+}
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+input:checked + .slide-container .carousel-controls label {
+   display: block; 
+}
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5 {
+opacity: 1;
+}
+input:checked + .slide-container .nav label { display: block; }
+
+
+/* Pages */
+
+.home {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fa-clock,
+.fa-graduation {
+  display: block;
+  margin: auto;
+  opacity: .7;
+  padding: .5rem;
+  max-width: 500px;
+}
+
+.home p {
+  max-width: 900px;
+  text-align: center;
+}
+
+.workshop img {
+  border-radius: 100px 20px 100px 20px;
+  -webkit-border-radius: 100px 20px 100px 20px;
+  -moz-border-radius: 100px 20px 100px 20px;
+  -ms-border-radius: 100px 20px 100px 20px;
+  -o-border-radius: 100px 20px 100px 20px;
+}
+
+/* Social */
+.profile img {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.contact,
+.form {
+  width: 600px;
+}
+
+  button,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--light);
+    color: var(--secondary);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+  }
+
+.contact-form-text {
+  margin: 0;
+  padding: 1rem;
+  outline: none;
+}
+
+textarea.contact-form-text {
+  resize: none;
+  height: 10rem;
+}
+.contact-form-btn {
+  text-align: center;
+  background: var(--light);
+  color: var(--secondary);
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+  background: var(--theme);
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+
+.contact-form-text:focus {
+  outline: solid 2px var(--theme);
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid {
+  background-color: lightgoldenrodyellow;
+}
+
+  .fa-email,
+  .fa-instagram,
+  .fa-facebook,
+  .fa-linkedin,
+  .fa-twitter,
+  .fa-flickr {
+    width: 40px;
+    color: var(--light);
+  }
+
+  .profile h2,
+  .contact h2 {
+    padding: 1rem 0 0 0;
+  }
+  .profile svg:hover {
+    color: var(--theme);
+  }
+  
+  .profile ul {
+    text-align: center;
+    padding: 2.5rem 0;
+    border-bottom: solid 2px var(--theme);
+  }
+  
+  .profile li {
+    padding: 5px;
+    display: inline;
+    line-height: 3rem;
+    list-style: none;
+  }
+    
+/* Media Queries */
+  @media screen and (max-width: 600px) {
+  
+    #logo,
+    #menu,
+    #main,
+    article,
+    section {
+      width: 100%;
+    }
+    
+    #logo {
+      text-align: center;
+    }
+  
+    #menu li {
+      padding: 2px;
+    }
+  
+    #menu ul {
+      justify-content: space-evenly;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+    .workshop img {
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+    }
+
+    .home h2 {
+      padding: 5px;
+    }
+
+    .fa-clock {
+      max-width: 300px;
+      padding-top: 100px;
+    }
+
+    .fa-graduation {
+      padding-top: 0;
+    }
+
+    .carousel-controls {
+      line-height: 20rem;
+    }
+
+    .carousel-controls label {
+      padding: 0 30px;
+    }
+  }
+  @media all and (orientation: landscape) and (max-height: 600px){
+
+    .fa-clock {
+      display: none;
+    }
+
+    .carousel-controls {
+      line-height: 15rem;
+    }
+
+    .carousel-controls label {
+      padding: 0 75px;
+    }
+
+    .carousel-dots {
+      bottom: 20px;
+    }
+ 
+  }
