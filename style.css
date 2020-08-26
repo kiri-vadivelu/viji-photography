@@ -463,6 +463,9 @@ input[type="email"]:valid {
   .contact h2 {
     padding: 1rem 0 0 0;
   }
+  .profile h3 {
+    text-align: center;
+  }
   .profile svg:hover {
     color: var(--theme);
   }
