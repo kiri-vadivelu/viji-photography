@@ -327,12 +327,41 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .fa-clock,
-.fa-graduation {
+.fa-graduation,
+.fa-hand-holding-heart {
   display: block;
   margin: auto;
   opacity: .7;
+  color: var(--theme);
   padding: .5rem;
-  max-width: 500px;
+  max-width: 450px;
+}
+
+.fa-image,
+.fa-portrait,
+.fa-square {
+  display: block;
+  margin: auto;
+  color: var(--theme);
+  padding: 1rem;
+  max-width: 75px;
+}
+
+.fa-image {
+  max-width: 100px;
+}
+
+.box {
+  max-width: 750px;
+  margin: auto;
+}
+
+.card {
+  display: inline-block;
+  margin: auto;
+  width: 200px;
+  padding: .5rem;
+  text-align: center;
 }
 
 .home p {
@@ -511,6 +540,9 @@ input[type="email"]:valid {
 
     .carousel-controls label {
       padding: 0 30px;
+    }
+    .card {
+      display: block;
     }
   }
   @media all and (orientation: landscape) and (max-height: 600px){
