@@ -39,42 +39,19 @@
 
   <url>
 
+    <loc>https://vijiphotography.ca/print.html</loc>
+
+    <lastmod>2020-01-15</lastmod>
+
+    <changefreq>yearly</changefreq>
+
+    <priority>0.5</priority>
+
+  </url>
+  
+  <url>
+
     <loc>https://vijiphotography.ca/questions.html</loc>
-
-    <lastmod>2020-01-15</lastmod>
-
-    <changefreq>yearly</changefreq>
-
-    <priority>0.5</priority>
-
-  </url>
-  <url>
-
-    <loc>https://vijiphotography.ca/guide.html</loc>
-
-    <lastmod>2020-01-15</lastmod>
-
-    <changefreq>yearly</changefreq>
-
-    <priority>0.5</priority>
-
-  </url>
-
-  <url>
-
-    <loc>https://vijiphotography.ca/conditions.html</loc>
-
-    <lastmod>2020-01-15</lastmod>
-
-    <changefreq>yearly</changefreq>
-
-    <priority>0.5</priority>
-
-  </url>
-
-  <url>
-
-    <loc>https://vijiphotography.ca/terms.html</loc>
 
     <lastmod>2020-01-15</lastmod>
 

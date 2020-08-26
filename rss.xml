@@ -27,16 +27,9 @@
       <pubDate>Wed, 15 Jan 2020 06:06:00 Z</pubDate>
     </item>
     <item>
-      <guid>https://vijiphotography.ca/conditions.html</guid>
-      <title>Viji Photography: Conditions of Service</title>
-      <link>https://vijiphotography.ca/conditions.html</link>
-      <description />
-      <pubDate>Wed, 15 Jan 2020 06:06:00 Z</pubDate>
-    </item>
-    <item>
-      <guid>https://vijiphotography.ca/terms.html</guid>
-      <title>Viji Photography: Terms of Service</title>
-      <link>https://vijiphotography.ca/terms.html</link>
+      <guid>https://vijiphotography.ca/print.html</guid>
+      <title>Viji Photography: Fine Art Print</title>
+      <link>https://vijiphotography.ca/print.html</link>
       <description />
       <pubDate>Wed, 15 Jan 2020 06:06:00 Z</pubDate>
     </item>
@@ -47,13 +40,5 @@
       <description />
       <pubDate>Wed, 15 Jan 2020 06:06:00 Z</pubDate>
     </item>
-     <item>
-      <guid>https://vijiphotography.ca/guide.html</guid>
-      <title>Guide for New Clients, Photographers and Artists</title>
-      <link>https://vijiphotography.ca/guide.html</link>
-      <description />
-      <pubDate>Wed, 15 Jan 2020 06:06:00 Z</pubDate>
-    </item>
-
   </channel>
 </rss>
