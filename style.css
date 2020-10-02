@@ -326,7 +326,7 @@ input:checked + .slide-container .nav label { display: block; }
   transform: translateY(-50%);
 }
 
-.fa-clock,
+.fa-camera,
 .fa-graduation,
 .fa-hand-holding-heart {
   display: block;
