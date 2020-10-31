@@ -527,7 +527,7 @@ input[type="email"]:valid {
       padding: 5px;
     }
 
-    .fa-clock {
+    .fa-camera {
       max-width: 300px;
       padding-top: 100px;
     }
@@ -549,7 +549,7 @@ input[type="email"]:valid {
   }
   @media all and (orientation: landscape) and (max-height: 600px){
 
-    .fa-clock {
+    .fa-camera {
       display: none;
     }
 
