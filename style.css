@@ -471,7 +471,6 @@ input[type="email"]:valid {
   .profile ul {
     text-align: center;
     padding: 2.5rem 0;
-    border-bottom: solid 2px var(--theme);
   }
   
   .profile li {
