@@ -329,10 +329,11 @@ input:checked + .slide-container .nav label { display: block; }
 .fa-hand-holding-heart {
   display: block;
   margin: auto;
-  opacity: .7;
+  opacity: .8;
   color: var(--theme);
   padding: .5rem;
-  max-width: 450px;
+  max-width: 300px;
+  border-bottom: solid 3px var(--light);
 }
 
 .fa-image,
