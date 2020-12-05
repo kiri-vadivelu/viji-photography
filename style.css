@@ -384,6 +384,10 @@ input:checked + .slide-container .nav label { display: block; }
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+.profile {
+  background-color: rgba(0, 140, 140, .1);
+  border-radius: 10px;
+}
 .contact,
 .form {
   width: 600px;
